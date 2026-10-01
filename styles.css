@@ -38,9 +38,13 @@ nav a{white-space:nowrap}.authors strong{font-weight:700}.conference-versions{ma
   #teaching .ks-role { color: var(--ks-accent); font-size: 13px; margin: 0 0 10px; }
   #teaching .ks-desc { font-size: 13px; line-height: 1.8; margin: 8px 0 0; color: var(--ks-muted); }
   #teaching .ks-materials { margin: 12px 0 0; font-size: 12px; color: var(--ks-muted); }
-  #teaching .ks-book { margin-top: 24px; padding-left: 16px; border-left: 2px solid var(--ks-line); }
-  #teaching .ks-book h3 { font-size: 13px; margin-bottom: 4px; }
-  #teaching .ks-book p { font-size: 12px; margin: 0; color: var(--ks-muted); }
+  #teaching .ks-book-feature { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 28px; align-items: center; padding: 2px 0 5px; }
+  #teaching .ks-book-cover { display: block; width: 132px; height: auto; box-shadow: 3px 5px 16px light-dark(#2333411a, #00000033); }
+  #teaching .ks-book-copy h3 { font-size: 21px; line-height: 1.4; font-weight: 600; letter-spacing: -.3px; margin: 0 0 14px; }
+  #teaching .ks-book-author { font-size: 14px; margin: 0 0 5px; color: var(--ks-ink); }
+  #teaching .ks-book-publisher { font-size: 13px; margin: 0; color: var(--ks-muted); }
+  #teaching .ks-book-language { font-size: 12px; margin: 4px 0 0; color: var(--ks-muted); }
+  #teaching .ks-book-link { display: inline-block; font-size: 13px; margin-top: 18px; }
   #teaching .ks-review-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-top: 15px; }
   #teaching .ks-review-grid h4 { margin: 0 0 9px; color: var(--ks-accent); font-size: 12px; font-weight: 600; }
   #teaching .ks-review-grid ul { list-style: none; padding: 0; margin: 0; color: var(--ks-muted); font-size: 13px; }
@@ -60,19 +64,23 @@ nav a{white-space:nowrap}.authors strong{font-weight:700}.conference-versions{ma
   #teaching .ks-logo-grid li { grid-column: span 2; height: 66px; display: flex; align-items: center; justify-content: center; }
   #teaching .ks-logo-grid li:nth-child(4) { grid-column: 2 / span 2; }
   #teaching .ks-logo-grid li:nth-child(5) { grid-column: 4 / span 2; }
-  #teaching .ks-logo-well { display: flex; align-items: center; justify-content: center; height: 46px; min-width: 118px; padding: 10px; border-radius: 4px; background: light-dark(transparent, #f3f6f8); }
+  #teaching .ks-logo-well { display: flex; align-items: center; justify-content: center; height: 58px; width: 100%; max-width: 160px; padding: 8px; border-radius: 4px; background: light-dark(transparent, #f3f6f8); }
   #teaching .ks-logo-grid img { display: block; object-fit: contain; max-width: 100%; }
-  #teaching .ks-logo-naver { width: 56px; height: 11px; }
-  #teaching .ks-logo-shinhan { width: 74px; height: 14px; }
-  #teaching .ks-logo-kyobo { width: 60px; height: 20px; }
-  #teaching .ks-logo-samjjeomsam { width: 48px; height: 16px; }
-  #teaching .ks-logo-insunet { width: 60px; height: 12px; }
+  #teaching .ks-logo-naver { width: 72.8px; height: 14.3px; }
+  #teaching .ks-logo-shinhan { width: 96.2px; height: 18.2px; }
+  #teaching .ks-logo-kyobo { width: 78px; height: 26px; }
+  #teaching .ks-logo-samjjeomsam { width: 62.4px; height: 20.8px; }
+  #teaching .ks-logo-insunet { width: 78px; height: 15.6px; }
   @media (max-width: 760px) {
     #teaching h1 { font-size: 29px; }
   }
   @media (max-width: 440px) {
     #teaching .ks-review-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-    #teaching .ks-logo-grid { column-gap: 6px; row-gap: 14px; }
+    #teaching .ks-logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 10px; row-gap: 18px; }
+    #teaching .ks-logo-grid li:nth-child(4) { grid-column: span 2; }
+    #teaching .ks-logo-grid li:nth-child(5) { grid-column: 2 / span 2; }
     #teaching .ks-logo-well { min-width: 0; width: 100%; padding: 3px; }
     #teaching .ks-logo-grid img { max-width: 95%; }
+    #teaching .ks-book-feature { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    #teaching .ks-book-cover { width: 124px; }
   }
