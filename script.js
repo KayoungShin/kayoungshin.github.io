@@ -10,7 +10,7 @@ function showPage() {
     if (active) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   }
-  document.title = current === 'home' ? 'Kayoung Shin | Information Systems' : `${current === 'research' ? 'Research' : 'Teaching & Service'} | Kayoung Shin`;
+  document.title = current === 'home' ? 'Kayoung Shin | Information Systems' : `${current === 'research' ? 'Research' : 'Teaching & Experience'} | Kayoung Shin`;
 }
 window.addEventListener('hashchange', () => { showPage(); window.scrollTo({top: 0, behavior: 'instant'}); document.getElementById('main').focus({preventScroll:true}); });
 showPage();

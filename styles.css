@@ -8,3 +8,71 @@
 .orcid-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:15px;height:15px;border:1px solid #7c8993;border-radius:50%;color:#7c8993;font-size:9px;font-family:Arial,sans-serif;font-weight:600;line-height:1}.file-type{font-size:10px;letter-spacing:.4px;color:#82919a;margin-left:4px}.materials{font-size:14px;line-height:1.85;margin:13px 0 0;color:#71808a}.paper h3 a{color:var(--ink);text-decoration-color:#c2d2da}.paper h3 a:hover{color:var(--accent)}.venue-list{padding-left:19px;font-size:14px;line-height:1.8;margin:14px 0 0}.venue-list li{padding-left:3px;margin-bottom:10px}.venue-note{display:block;color:#78858e;margin-top:3px}.project-description{font-size:15px;line-height:1.85;margin:12px 0 0}.link-divider{margin:0 7px;color:#a9b3ba}.book-section{margin-top:34px}.book-section .paper{padding-top:0}
 
 nav a{white-space:nowrap}.authors strong{font-weight:700}.conference-versions{margin-top:19px;padding:3px 0 2px 18px;border-left:2px solid #e2eaf0}.conference-versions h4{font-size:14px;line-height:1.6;font-weight:600;color:var(--accent);margin:0 0 10px}.version-title{font-size:15px;line-height:1.75;color:var(--ink);margin:0 0 8px}.conference-versions .authors{margin-bottom:9px}.conference-versions .venue-list{margin-top:10px}.conference-versions .venue-list li:last-child{margin-bottom:0}.conference-versions .materials{margin-top:12px}.earlier-research{margin-top:29px}.earlier-research>summary{font-size:15px}.earlier-research .paper h3{font-size:16px}.reviewer-label{font-size:14px;font-weight:600;color:var(--accent);margin:18px 0 5px}.reviewer-list{font-size:15px;margin:0;padding-left:20px;line-height:1.9}.academic-service .paper{padding-top:0}
+
+/* Approved Teaching & Experience tab */
+
+  #teaching {
+    --ks-bg: light-dark(#ffffff, #1b2024);
+    --ks-ink: light-dark(#35434a, #e5ecef);
+    --ks-muted: light-dark(#788187, #b5c0c6);
+    --ks-accent: light-dark(#2b6079, #a4cbe0);
+    --ks-line: light-dark(#e8ecee, #36434b);
+    --ks-soft: light-dark(#f3f7f9, #26343d);
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--ks-bg);
+    color: var(--ks-ink);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  #teaching * { box-sizing: border-box; }
+  #teaching a { color: var(--ks-accent); text-underline-offset: 3px; }
+  #teaching .ks-eyebrow { text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; color: var(--ks-muted); margin: 0 0 7px; }
+  #teaching h1 { font-size: 33px; font-weight: 600; line-height: 1.25; letter-spacing: -.8px; margin: 0 0 44px; }
+  #teaching .ks-section { margin: 0 0 38px; padding: 0 0 36px; border-bottom: 1px solid var(--ks-line); }
+  #teaching .ks-section > h2 { font-size: 21px; line-height: 1.4; font-weight: 600; letter-spacing: -.3px; margin: 0 0 24px; }
+  #teaching .ks-item { margin: 0 0 26px; }
+  #teaching .ks-item:last-child { margin-bottom: 0; }
+  #teaching .ks-meta { margin: 0 0 5px; color: var(--ks-muted); font-size: 12px; line-height: 1.65; }
+  #teaching h3 { margin: 0 0 5px; font-size: 16px; line-height: 1.5; font-weight: 600; }
+  #teaching .ks-role { color: var(--ks-accent); font-size: 13px; margin: 0 0 10px; }
+  #teaching .ks-desc { font-size: 13px; line-height: 1.8; margin: 8px 0 0; color: var(--ks-muted); }
+  #teaching .ks-materials { margin: 12px 0 0; font-size: 12px; color: var(--ks-muted); }
+  #teaching .ks-book { margin-top: 24px; padding-left: 16px; border-left: 2px solid var(--ks-line); }
+  #teaching .ks-book h3 { font-size: 13px; margin-bottom: 4px; }
+  #teaching .ks-book p { font-size: 12px; margin: 0; color: var(--ks-muted); }
+  #teaching .ks-review-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-top: 15px; }
+  #teaching .ks-review-grid h4 { margin: 0 0 9px; color: var(--ks-accent); font-size: 12px; font-weight: 600; }
+  #teaching .ks-review-grid ul { list-style: none; padding: 0; margin: 0; color: var(--ks-muted); font-size: 13px; }
+  #teaching .ks-review-grid li { margin: 0 0 6px; }
+  #teaching .ks-company-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 14px; }
+  #teaching .ks-company-head h3 { margin: 0; }
+  #teaching .ks-job { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 8px; font-size: 13px; color: var(--ks-accent); }
+  #teaching .ks-job-title { color: var(--ks-accent); font-size: 13px; }
+  #teaching .ks-job-period { font-size: 12px; color: var(--ks-muted); }
+  #teaching .ks-position { margin-top: 16px; }
+  #teaching .ks-award { margin: 10px 0; }
+  #teaching .ks-award-title { display: flex; align-items: center; gap: 7px; margin: 0; color: var(--ks-ink); font-size: 12px; line-height: 1.6; }
+  #teaching .ks-award-title strong { font-weight: 500; }
+  #teaching .ks-award-title i, #teaching .ks-award-title svg { flex: 0 0 16px; width: 16px; height: 16px; color: light-dark(#94723a, #cfb078); }
+  #teaching .ks-consulting-role { color: var(--ks-muted); font-size: 13px; margin: 0; }
+  #teaching .ks-logo-grid { max-width: 540px; margin: 32px auto 20px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 12px; row-gap: 24px; }
+  #teaching .ks-logo-grid li { grid-column: span 2; height: 66px; display: flex; align-items: center; justify-content: center; }
+  #teaching .ks-logo-grid li:nth-child(4) { grid-column: 2 / span 2; }
+  #teaching .ks-logo-grid li:nth-child(5) { grid-column: 4 / span 2; }
+  #teaching .ks-logo-well { display: flex; align-items: center; justify-content: center; height: 46px; min-width: 118px; padding: 10px; border-radius: 4px; background: light-dark(transparent, #f3f6f8); }
+  #teaching .ks-logo-grid img { display: block; object-fit: contain; max-width: 100%; }
+  #teaching .ks-logo-naver { width: 56px; height: 11px; }
+  #teaching .ks-logo-shinhan { width: 74px; height: 14px; }
+  #teaching .ks-logo-kyobo { width: 60px; height: 20px; }
+  #teaching .ks-logo-samjjeomsam { width: 48px; height: 16px; }
+  #teaching .ks-logo-insunet { width: 60px; height: 12px; }
+  @media (max-width: 760px) {
+    #teaching h1 { font-size: 29px; }
+  }
+  @media (max-width: 440px) {
+    #teaching .ks-review-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    #teaching .ks-logo-grid { column-gap: 6px; row-gap: 14px; }
+    #teaching .ks-logo-well { min-width: 0; width: 100%; padding: 3px; }
+    #teaching .ks-logo-grid img { max-width: 95%; }
+  }
