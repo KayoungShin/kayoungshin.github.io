@@ -1,16 +1,36 @@
-const pages = ['home', 'research', 'teaching'];
-function showPage() {
-  const candidate = location.hash.slice(1);
-  if (candidate === 'main') return;
-  const current = pages.includes(candidate) ? candidate : 'home';
-  for (const name of pages) document.getElementById(name).hidden = name !== current;
-  for (const link of document.querySelectorAll('nav [data-nav]')) {
-    const active = link.dataset.nav === current;
-    link.classList.toggle('active', active);
-    if (active) link.setAttribute('aria-current', 'page');
-    else link.removeAttribute('aria-current');
+(() => {
+  const root = document.getElementById('ks-site');
+  const main = document.getElementById('main');
+  const titles = {
+    home: 'Home',
+    research: 'Research',
+    teaching: 'Teaching & Service',
+    experience: 'Professional Experience',
+    media: 'Media & Talks'
+  };
+  const panels = Array.from(root.querySelectorAll('.ks-page'));
+  const navigation = Array.from(root.querySelectorAll('.ks-nav [data-page]'));
+
+  function showPage(moveFocus = false) {
+    const candidate = window.location.hash.slice(1);
+    if (candidate === 'main') return;
+    const current = Object.hasOwn(titles, candidate) ? candidate : 'home';
+    for (const panel of panels) panel.hidden = panel.id !== `ks-page-${current}`;
+    for (const link of navigation) {
+      const active = link.dataset.page === current;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    }
+    document.title = current === 'home'
+      ? 'Kayoung Shin | Information Systems'
+      : `${titles[current]} | Kayoung Shin`;
+    if (moveFocus) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      main.focus({ preventScroll: true });
+    }
   }
-  document.title = current === 'home' ? 'Kayoung Shin | Information Systems' : `${current === 'research' ? 'Research' : 'Teaching & Experience'} | Kayoung Shin`;
-}
-window.addEventListener('hashchange', () => { showPage(); window.scrollTo({top: 0, behavior: 'instant'}); document.getElementById('main').focus({preventScroll:true}); });
-showPage();
+
+  window.addEventListener('hashchange', () => showPage(true));
+  showPage();
+})();
